@@ -1,0 +1,12 @@
+PROJETO CARTÕES DIGITAIS DWIN
+
+1. No GitHub, crie um repositório público (ex.: cartoes-dwin).
+2. Envie o arquivo index.html e as seis pastas: raphaelly, anna, patricia, karina, leticia e jennifer.
+3. Ative Settings > Pages > Deploy from a branch > main > /(root) > Save.
+4. Os links ficarão assim:
+   https://SEUUSUARIO.github.io/cartoes-dwin/anna/
+   https://SEUUSUARIO.github.io/cartoes-dwin/patricia/
+   etc.
+5. Grave o link individual de cada pessoa na tag NFC.
+
+Observação: o botão WhatsApp usa os números apresentados nos cartões.
