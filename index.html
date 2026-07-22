@@ -3,249 +3,148 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
 
-<title>Cartões Dwin</title>
+    <title>Cartões Dwin</title>
 
-<style>
+    <style>
 
-:root{
-    --vinho:#9e1321;
-    --vinho2:#b21d29;
-    --claro:#f6f2f2;
-    --texto:#251d1e;
-}
+        :root{
+            --vinho:#9e1321;
+            --vinho2:#b21d29;
+            --claro:#f6f2f2;
+            --texto:#251d1e;
+        }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
 
-body{
-    min-height:100vh;
-    background:var(--claro);
-    font-family:Arial,Helvetica,sans-serif;
-    color:var(--texto);
-    padding:18px 14px 30px;
-}
+        body{
+            min-height:100vh;
+            background:var(--claro);
+            font-family:Arial, Helvetica, sans-serif;
+            color:var(--texto);
+            padding:18px 14px 30px;
+        }
 
-.container{
-    width:100%;
-    max-width:480px;
-    margin:0 auto;
-}
+        .container{
+            width:100%;
+            max-width:480px;
+            margin:0 auto;
+        }
 
-/* CAPA */
+        /* IMAGEM NO TOPO */
 
-.capa{
-    display:block;
-    width:100%;
-    border-radius:18px;
-    margin-bottom:25px;
-    box-shadow:0 10px 30px rgba(63,0,8,.22);
-}
+        .capa{
+            display:block;
+            width:100%;
+            height:auto;
+            margin:0 auto 24px;
+            border-radius:18px;
+            box-shadow:0 10px 30px rgba(63,0,8,.22);
+        }
 
-.card-wrap{
-    position:relative;
-    border-radius:18px;
-    overflow:hidden;
-    background:#fff;
-    box-shadow:0 10px 30px rgba(63,0,8,.22);
-}
+        /* TÍTULO */
 
-.card-wrap img{
-    display:block;
-    width:100%;
-    height:auto;
-}
+        h1{
+            text-align:center;
+            color:var(--vinho);
+            margin:0 0 8px;
+            font-size:28px;
+        }
 
-.hotspot{
-    position:absolute;
-    z-index:5;
-    left:39%;
-    width:54%;
-    border-radius:8px;
-}
+        p{
+            text-align:center;
+            color:#75696b;
+            margin-bottom:20px;
+        }
 
-.hotspot:focus{
-    outline:3px solid #fff;
-    outline-offset:2px;
-    background:rgba(255,255,255,.12);
-}
+        /* MENU DOS CONTATOS */
 
-.hs-phone{
-    top:63.5%;
-    height:6.5%;
-}
+        .menu{
+            display:grid;
+            gap:12px;
+        }
 
-.hs-email{
-    top:70.2%;
-    height:6.5%;
-}
+        .menu a{
+            display:block;
+            padding:16px;
+            background:#fff;
+            color:var(--vinho);
+            text-decoration:none;
+            font-weight:700;
+            border-radius:12px;
+            text-align:center;
+            box-shadow:0 4px 12px rgba(0,0,0,.08);
+            transition:transform .15s, box-shadow .15s;
+        }
 
-.hs-instagram{
-    top:80.6%;
-    height:5.5%;
-}
+        .menu a:hover{
+            transform:translateY(-2px);
+            box-shadow:0 8px 18px rgba(0,0,0,.14);
+        }
 
-.hs-catalog{
-    top:86%;
-    height:5.5%;
-}
+        .menu a:active{
+            transform:scale(.98);
+        }
 
-.hs-site{
-    top:91.2%;
-    height:5.5%;
-}
-
-.buttons{
-    display:grid;
-    gap:11px;
-    margin-top:20px;
-}
-
-.btn{
-    min-height:54px;
-    border-radius:12px;
-    padding:13px 18px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    font-weight:700;
-    font-size:16px;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-    transition:transform .15s,opacity .15s;
-}
-
-.btn:active{
-    transform:scale(.98);
-}
-
-.btn:hover{
-    opacity:.92;
-}
-
-.whatsapp{
-    background:#25d366;
-    color:#fff;
-}
-
-.primary{
-    background:var(--vinho);
-    color:#fff;
-}
-
-.light{
-    background:#fff;
-    color:var(--vinho);
-    border:1px solid #e3d7d9;
-}
-
-.footer{
-    text-align:center;
-    color:#75696b;
-    font-size:12px;
-    line-height:1.5;
-    margin-top:20px;
-}
-
-h1{
-    text-align:center;
-    color:var(--vinho);
-    margin-bottom:8px;
-}
-
-p{
-    text-align:center;
-    color:#75696b;
-    margin-bottom:20px;
-}
-
-.menu{
-    display:grid;
-    gap:12px;
-}
-
-.menu a{
-
-    display:block;
-
-    padding:16px;
-
-    background:#fff;
-
-    color:var(--vinho);
-
-    text-decoration:none;
-
-    font-weight:700;
-
-    border-radius:12px;
-
-    text-align:center;
-
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-
-    transition:.2s;
-
-}
-
-.menu a:hover{
-
-    transform:translateY(-2px);
-
-    box-shadow:0 8px 18px rgba(0,0,0,.15);
-
-}
-
-.menu a:active{
-
-    transform:scale(.98);
-
-}
-
-</style>
+    </style>
 
 </head>
 
 <body>
 
-<main class="container">
+    <main class="container">
 
-<img
-    src="capa.png"
-    class="capa"
-    alt="Dwin Soluções em Brindes"
->
+        <!-- IMAGEM ACIMA DO TÍTULO -->
 
-<h1>Cartões Dwin</h1>
+        <img
+            src="./capa.png"
+            class="capa"
+            alt="Dwin Soluções em Brindes"
+        >
 
-<p>Selecione um contato</p>
+        <h1>Cartões Dwin</h1>
 
-<nav class="menu">
+        <p>Selecione um contato</p>
 
-<a href="raphaelly/">Raphaelly</a>
+        <nav class="menu">
 
-<a href="anna/">Anna Helena</a>
+            <a href="./raphaelly/">
+                Raphaelly
+            </a>
 
-<a href="patricia/">Patricia</a>
+            <a href="./anna/">
+                Anna Helena
+            </a>
 
-<a href="karina/">Karina</a>
+            <a href="./patricia/">
+                Patricia
+            </a>
 
-<a href="leticia/">Letícia</a>
+            <a href="./karina/">
+                Karina
+            </a>
 
-<a href="jennifer/">Jennifer</a>
+            <a href="./leticia/">
+                Letícia
+            </a>
 
-</nav>
+            <a href="./jennifer/">
+                Jennifer
+            </a>
 
-</main>
+        </nav>
+
+    </main>
 
 </body>
 
