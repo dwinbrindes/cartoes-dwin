@@ -1,49 +1,350 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#9e1321">
-<title>Karina | Dwin Soluções em Brindes</title>
-<meta name="description" content="Cartão de visita digital de Karina, Vendedora da Dwin Soluções em Brindes.">
-<style>
-:root{--vinho:#9e1321;--vinho2:#b21d29;--claro:#f6f2f2;--texto:#251d1e}
-*{box-sizing:border-box;margin:0;padding:0}
-body{min-height:100vh;background:var(--claro);font-family:Arial,Helvetica,sans-serif;color:var(--texto);padding:18px 14px 30px}
-.container{width:100%;max-width:480px;margin:0 auto}
-.card-wrap{position:relative;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(63,0,8,.22)}
-.card-wrap img{display:block;width:100%;height:auto}
-.hotspot{position:absolute;z-index:5;left:39%;width:54%;border-radius:8px}
-.hotspot:focus{outline:3px solid #fff;outline-offset:2px;background:rgba(255,255,255,.12)}
-.hs-phone{top:63.5%;height:6.5%}.hs-email{top:70.2%;height:6.5%}.hs-instagram{top:80.6%;height:5.5%}.hs-catalog{top:86.0%;height:5.5%}.hs-site{top:91.2%;height:5.5%}
-.buttons{display:grid;gap:11px;margin-top:20px}
-.btn{min-height:54px;border-radius:12px;padding:13px 18px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;font-size:16px;box-shadow:0 4px 12px rgba(0,0,0,.08);transition:transform .15s,opacity .15s}
-.btn:active{transform:scale(.98)}.btn:hover{opacity:.92}
-.whatsapp{background:#25d366;color:#fff}.primary{background:var(--vinho);color:#fff}.light{background:#fff;color:var(--vinho);border:1px solid #e3d7d9}
-.footer{text-align:center;color:#75696b;font-size:12px;line-height:1.5;margin-top:20px}
-</style>
-</head>
-<body>
-<main class="container">
-  <section class="card-wrap" aria-label="Cartão de visita de Karina">
-    <img src="cartao.png" alt="Cartão de visita de Karina">
-    <a class="hotspot hs-phone" href="https://wa.me/554131548908?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20cart%C3%A3o%20de%20visita%20digital." target="_blank" rel="noopener" aria-label="Falar com Karina pelo WhatsApp"></a>
-    <a class="hotspot hs-email" href="mailto:karina@dwin.com.br" aria-label="Enviar e-mail para Karina"></a>
-    <a class="hotspot hs-instagram" href="https://www.instagram.com/dwin_brindes/" target="_blank" rel="noopener" aria-label="Abrir Instagram da Dwin"></a>
-    <a class="hotspot hs-catalog" href="https://heyzine.com/flip-book/ceb3f046e6.html" target="_blank" rel="noopener" aria-label="Abrir catálogo Dwin 2026/27"></a>
-    <a class="hotspot hs-site" href="https://www.dwin.com.br/" target="_blank" rel="noopener" aria-label="Abrir site da Dwin"></a>
-  </section>
+    <meta charset="UTF-8">
 
-  <section class="buttons" aria-label="Links de contato">
-    <a class="btn whatsapp" href="https://wa.me/554131548908?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20cart%C3%A3o%20de%20visita%20digital." target="_blank" rel="noopener">Falar pelo WhatsApp</a>
-    <a class="btn primary" href="https://heyzine.com/flip-book/ceb3f046e6.html" target="_blank" rel="noopener">Abrir catálogo 2026/27</a>
-    <a class="btn light" href="mailto:karina@dwin.com.br">Enviar e-mail</a>
-    <a class="btn light" href="tel:+554131548908">Ligar para (41) 3154-8908</a>
-    <a class="btn light" href="https://www.instagram.com/dwin_brindes/" target="_blank" rel="noopener">Instagram da Dwin</a>
-    <a class="btn light" href="https://www.dwin.com.br/" target="_blank" rel="noopener">Site da Dwin</a>
-    <a class="btn primary" href="contato.vcf" download>Salvar contato</a>
-  </section>
-  <footer class="footer">Dwin Soluções em Brindes<br>Karina - Vendedora</footer>
-</main>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta name="theme-color" content="#9e1321">
+
+    <title>Karina | Dwin Soluções em Brindes</title>
+
+    <meta
+        name="description"
+        content="Cartão de visita digital de Karina, Vendedora da Dwin Soluções em Brindes."
+    >
+
+    <style>
+        :root {
+            --vinho: #9e1321;
+            --fundo: #f6f2f2;
+            --texto: #251d1e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 18px 14px 30px;
+            background: var(--fundo);
+            color: var(--texto);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /*
+        A imagem e as áreas clicáveis ficam dentro deste bloco.
+        Como tudo está em porcentagem, os links acompanham o
+        redimensionamento do cartão em celulares e computadores.
+        */
+        .card-wrap {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 18px;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(63, 0, 8, 0.22);
+        }
+
+        .card-wrap img {
+            display: block;
+            width: 100%;
+            height: auto;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        /*
+        CONFIGURAÇÃO GERAL DAS ÁREAS CLICÁVEIS
+
+        As áreas ficam invisíveis sobre as informações do cartão.
+        */
+        .hotspot {
+            position: absolute;
+            z-index: 10;
+            display: block;
+            border-radius: 7px;
+            background: transparent;
+            text-decoration: none;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .hotspot:focus-visible {
+            outline: 3px solid #ffffff;
+            outline-offset: 2px;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        /*
+        WHATSAPP / TELEFONE
+        Cobre o ícone e o número: (41) 3154-8908
+        */
+        .hs-phone {
+            top: 66.0%;
+            left: 33.4%;
+            width: 40%;
+            height: 4.8%;
+        }
+
+        /*
+        E-MAIL
+        Cobre o ícone e: karina@dwin.com.br
+        */
+        .hs-email {
+            top: 70.7%;
+            left: 33.4%;
+            width: 48%;
+            height: 5.0%;
+        }
+
+        /*
+        INSTAGRAM
+        Cobre o ícone e: @dwin_brindes
+        */
+        .hs-instagram {
+            top: 79.7%;
+            left: 33.4%;
+            width: 45%;
+            height: 4.7%;
+        }
+
+        /*
+        CATÁLOGO
+        Cobre o ícone e: Catálogo 2026/27
+        */
+        .hs-catalog {
+            top: 84.2%;
+            left: 33.4%;
+            width: 48%;
+            height: 4.7%;
+        }
+
+        /*
+        SITE
+        Cobre o ícone e: www.dwin.com.br
+        */
+        .hs-site {
+            top: 88.8%;
+            left: 33.4%;
+            width: 48%;
+            height: 4.8%;
+        }
+
+        .buttons {
+            display: grid;
+            gap: 11px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 54px;
+            padding: 13px 18px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition:
+                transform 0.15s ease,
+                opacity 0.15s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.92;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .whatsapp {
+            background: #25d366;
+            color: #ffffff;
+        }
+
+        .primary {
+            background: var(--vinho);
+            color: #ffffff;
+        }
+
+        .light {
+            border: 1px solid #e3d7d9;
+            background: #ffffff;
+            color: var(--vinho);
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #75696b;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 360px) {
+            body {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            .btn {
+                min-height: 50px;
+                padding: 12px 14px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+
+        <section
+            class="card-wrap"
+            aria-label="Cartão de visita de Karina"
+        >
+            <img
+                src="cartao.png"
+                alt="Cartão de visita de Karina, Vendedora da Dwin Soluções em Brindes"
+            >
+
+            <!-- WhatsApp e telefone -->
+            <a
+                class="hotspot hs-phone"
+                href="https://wa.me/554131548908?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20cart%C3%A3o%20de%20visita%20digital."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Falar com Karina pelo WhatsApp"
+                title="Falar com Karina pelo WhatsApp"
+            ></a>
+
+            <!-- E-mail -->
+            <a
+                class="hotspot hs-email"
+                href="mailto:karina@dwin.com.br"
+                aria-label="Enviar e-mail para Karina"
+                title="Enviar e-mail para Karina"
+            ></a>
+
+            <!-- Instagram -->
+            <a
+                class="hotspot hs-instagram"
+                href="https://www.instagram.com/dwin_brindes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir o Instagram da Dwin"
+                title="Abrir Instagram da Dwin"
+            ></a>
+
+            <!-- Catálogo -->
+            <a
+                class="hotspot hs-catalog"
+                href="https://heyzine.com/flip-book/ceb3f046e6.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir o catálogo Dwin 2026/27"
+                title="Abrir catálogo Dwin 2026/27"
+            ></a>
+
+            <!-- Site -->
+            <a
+                class="hotspot hs-site"
+                href="https://www.dwin.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir o site da Dwin"
+                title="Abrir site da Dwin"
+            ></a>
+        </section>
+
+        <section
+            class="buttons"
+            aria-label="Links de contato de Karina"
+        >
+            <a
+                class="btn whatsapp"
+                href="https://wa.me/554131548908?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20cart%C3%A3o%20de%20visita%20digital."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Falar pelo WhatsApp
+            </a>
+
+            <a
+                class="btn primary"
+                href="https://heyzine.com/flip-book/ceb3f046e6.html"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Abrir catálogo 2026/27
+            </a>
+
+            <a
+                class="btn light"
+                href="mailto:karina@dwin.com.br"
+            >
+                Enviar e-mail
+            </a>
+
+            <a
+                class="btn light"
+                href="tel:+554131548908"
+            >
+                Ligar para (41) 3154-8908
+            </a>
+
+            <a
+                class="btn light"
+                href="https://www.instagram.com/dwin_brindes/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram da Dwin
+            </a>
+
+            <a
+                class="btn light"
+                href="https://www.dwin.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Site da Dwin
+            </a>
+
+            <a
+                class="btn primary"
+                href="contato.vcf"
+                download
+            >
+                Salvar contato
+            </a>
+        </section>
+
+        <footer class="footer">
+            Dwin Soluções em Brindes<br>
+            Karina — Vendedora
+        </footer>
+
+    </main>
 </body>
 </html>
