@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#963f45">
+    <title>Cartões Dwin</title>
+
+    <style>
+        @font-face {
+            font-family: "Gotham";
+            src: url("./fonts/gotham-medium.ttf") format("truetype");
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        :root {
+            --vinho: #963f45;
+            --vinho-escuro: #6f292f;
+            --branco: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 24px 16px 40px;
+            background: linear-gradient(160deg, var(--vinho), var(--vinho-escuro));
+            font-family: "Gotham", Arial, Helvetica, sans-serif;
+            color: var(--branco);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .capa {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+            box-shadow: 0 16px 36px rgba(52, 14, 18, 0.24);
+        }
+
+        .cabecalho {
+            padding: 28px 8px 24px;
+            text-align: center;
+        }
+
+        .cabecalho h1 {
+            font-size: clamp(30px, 8vw, 42px);
+            line-height: 1.1;
+            font-weight: 500;
+        }
+
+        .cabecalho p {
+            margin-top: 9px;
+            color: rgba(255, 255, 255, 0.78);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        .menu {
+            display: grid;
+            gap: 13px;
+        }
+
+        .menu a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 62px;
+            padding: 0 20px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.97);
+            color: var(--vinho-escuro);
+            text-decoration: none;
+            font-size: 17px;
+            box-shadow: 0 10px 24px rgba(42, 8, 12, 0.16);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+
+        .menu a::after {
+            content: "›";
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 29px;
+            opacity: 0.5;
+        }
+
+        .menu a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(42, 8, 12, 0.22);
+        }
+
+        .menu a:active {
+            transform: scale(0.985);
+        }
+
+        .rodape {
+            padding-top: 26px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.62);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <img src="./cartao.png" class="capa" alt="Dwin Soluções em Brindes">
+
+        <header class="cabecalho">
+            <h1>Cartões Dwin</h1>
+            <p>Escolha um consultor para abrir o cartão digital.</p>
+        </header>
+
+        <nav class="menu" aria-label="Lista de consultores">
+            <a href="./raphaelly/">Raphaelly</a>
+            <a href="./anna/">Anna Helena</a>
+            <a href="./patricia/">Patricia</a>
+            <a href="./karina/">Karina</a>
+            <a href="./leticia/">Letícia</a>
+            <a href="./jennifer/">Jennifer</a>
+        </nav>
+
+        <footer class="rodape">Dwin Soluções em Brindes</footer>
+    </main>
+</body>
+</html>
